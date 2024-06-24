@@ -25,7 +25,7 @@ class BankAccount:
         return self.balance
     def change_password(self, old_password, new_password):
         if self.password == old_password:
-            self.pssword = new_password
+            self.password = new_password
             print("Password changed successfully.")
         else:
             print("Old password is incorrect")
@@ -78,6 +78,7 @@ def main():
                          account.deposit(amount)
                      elif sub_choice == "2":
                          amount = float(input("Enter amount to withdraw:"))
+                         account.withdraw(amount)
                      elif sub_choice == "3":
                          balance = account.get_balance()
                          print(f"Current balance:${balance:.2f}")
