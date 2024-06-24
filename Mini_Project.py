@@ -4,7 +4,7 @@ class BankAccount:
         self.password       = password
         self.balance        = 0.0
 
-    def deposit(self,account):
+    def deposit(self,amount):
         if amount > 0:
             self.balance += amount
             print(f"Deposited ${amount:.2f}. New balance:${self.balance:.2f}")
@@ -30,7 +30,7 @@ class BankAccount:
         else:
             print("Old password is incorrect")
 
-def create_amount(accounts):
+def create_account(accounts):
     account_number = input("Enter account number:")
     if account_number in accounts:
         print("Account already exists")
@@ -70,7 +70,7 @@ def main():
                      print("2.withdraw")
                      print("3.view Balance")
                      print("4.Change password")
-                     print("5.Longout")
+                     print("5.Logout")
                      sub_choice =input("Enter your choice:")
 
                      if sub_choice == "1":
